@@ -10,21 +10,20 @@
 
 function anagram(str1, str2) {
   // Напишите код здесь
-  let newStr1 = [];
-  let newStr2 = [];
-  for (let i of str1.toLowerCase().split("")) {
-    if (!newStr1.includes(i)) {
+  const newStr1 = [];
+  const newStr2 = [];
+  if (str1.toLowerCase() === str2.toLowerCase()) {
+    return false;
+  } else {
+    for (let i of str1.toLowerCase().split("")) {
       newStr1.push(i);
     }
-  }
 
-  for (let j of str2.toLowerCase().split("")) {
-    if (!newStr2.includes(j)) {
+    for (let j of str2.toLowerCase().split("")) {
       newStr2.push(j);
     }
+    return newStr1.sort().join("") === newStr2.sort().join("");
   }
-  //   console.log(newStr1.sort().join(""), newStr2.sort().join(""));
-  return newStr1.sort().join("") === newStr2.sort().join("");
 }
 
 // Протестируйте решение, вызывая функцию с разными аргументами:

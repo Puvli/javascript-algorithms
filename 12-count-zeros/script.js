@@ -11,7 +11,7 @@ function countZeros(n) {
   let count = 0;
   const zero = "0";
   for (let i = 1; i <= n; i++) {
-    let str = i.toString();
+    const str = i.toString();
     for (let j = 0; j < str.length; j++) {
       if (str[j] === zero) {
         count++;

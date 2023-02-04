@@ -12,7 +12,7 @@ function sumOfTwo(arr, sum) {
   // Напишите код здесь
   let res = 0;
   for (let i = 0; i < arr.length; i++) {
-    let elem = arr.splice(i, 1);
+    const elem = arr.splice(i, 1);
 
     arr.forEach(function (item) {
       if (sum === arr[i] + item) {

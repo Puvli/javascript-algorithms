@@ -8,7 +8,7 @@
 
 function primes(num) {
   // Напишите код здесь
-  let arr = [];
+  const arr = [];
   function isPrime(n) {
     if (n === 1 || n === 0) {
       return false;
